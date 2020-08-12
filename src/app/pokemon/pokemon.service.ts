@@ -3,6 +3,7 @@ import { Observable, pipe } from 'rxjs'
 import { HttpClient } from '@angular/common/http'
 import { IPokemon } from '../ipokemon'
 import { Injectable } from '@angular/core';
+import { capitalize } from '../../utils/helpers'
 import { environment } from '../../environments/environment'
 import { id_randomizer } from '../../utils/helpers';
 import { map } from 'rxjs/operators'
@@ -37,7 +38,7 @@ export class PokemonService {
   private transformToIPokemon(data: IPokemonData): IPokemon {
     return {
       id: data.id,
-      name: data.name,
+      name: capitalize(data.name),
       base_experience: data.base_experience,
       sprite_default: data.sprites.front_default,
       sprite_shiny: data.sprites.front_shiny

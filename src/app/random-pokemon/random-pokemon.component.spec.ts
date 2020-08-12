@@ -1,5 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing'
+import { PokemonService } from '../pokemon/pokemon.service';
 import { RandomPokemonComponent } from './random-pokemon.component';
 
 describe('RandomPokemonComponent', () => {
@@ -8,6 +10,7 @@ describe('RandomPokemonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ RandomPokemonComponent ]
     })
     .compileComponents();

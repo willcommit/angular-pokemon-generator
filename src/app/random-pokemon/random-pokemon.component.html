@@ -1,1 +1,13 @@
-<h1>{{pokemon.name}}</h1>
+<div *ngIf="pokemon">
+  <div>
+    <span>{{pokemon.id}}, {{pokemon.name}}</span>
+  </div>
+
+  <div>
+    <img [src]="pokemon.sprite_default">
+  </div>
+</div>
+
+<div *ngIf="!pokemon">
+  <p>NO DATA</p>
+</div>
