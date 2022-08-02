@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { PokemonService } from '../pokemon/pokemon.service';
@@ -8,7 +8,7 @@ describe('RandomPokemonComponent', () => {
   let component: RandomPokemonComponent;
   let fixture: ComponentFixture<RandomPokemonComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       declarations: [ RandomPokemonComponent ]
